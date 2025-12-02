@@ -22,7 +22,7 @@ body {
 LIGHT MODE
 ----------------------------------------------------- */
 [data-theme="light"] {
-    background: #ffffff;
+    background: white;
     color: #111;
 }
 
@@ -31,25 +31,46 @@ LIGHT MODE
     border-bottom: 1px solid #e1e1e1;
 }
 
-[data-theme="light"] .hero {
-    background: linear-gradient(#eaf2ff, #cfe0ff);
-}
-
-[data-theme="light"] .white {
-    background: #ffffff !important;
+[data-theme="light"] .skill-item {
+    background: white !important;
     border: 1px solid #ddd !important;
 }
 
-[data-theme="light"] .project-card {
-    background: #ffffff !important;
-    border: 1px solid #ddd;
-}
-
+[data-theme="light"] .project-card,
 [data-theme="light"] .exp-card,
 [data-theme="light"] .edu-card,
 [data-theme="light"] .branding-card {
-    background: #ffffff !important;
-    border: 1px solid #dddddd !important;
+    background: white !important;
+    border: 1px solid #ddd !important;
+}
+
+/* -----------------------------------------------------
+THEME TOGGLE — FIXED DOWN
+----------------------------------------------------- */
+.theme-toggle {
+    position: fixed;
+    top: 70px;
+    right: 25px;
+    z-index: 999;
+    display: flex;
+    gap: 14px;
+}
+
+.theme-toggle i {
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 22px;
+    color: white;
+    transition: 0.25s;
+}
+
+[data-theme="light"] .theme-toggle i {
+    color: black;
+}
+
+.theme-toggle i:hover {
+    transform: scale(1.2);
 }
 
 /* -----------------------------------------------------
@@ -64,19 +85,18 @@ nav {
     border-bottom: 1px solid rgba(255,255,255,0.1);
     position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 900;
 }
 
 .logoText {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
-    gap: 28px;
-    align-items: center;
+    gap: 30px;
 }
 
 .nav-links a {
@@ -91,30 +111,6 @@ nav {
 }
 
 /* -----------------------------------------------------
-THEME SWITCHER FIXED
------------------------------------------------------ */
-.theme-toggle {
-    position: fixed;
-    top: 18px;
-    right: 22px;
-    font-size: 20px;
-    display: flex;
-    gap: 10px;
-    z-index: 1000;
-}
-
-.theme-toggle i {
-    cursor: pointer;
-    padding: 6px;
-    border-radius: 6px;
-    transition: 0.25s;
-}
-
-.theme-toggle i:hover {
-    transform: scale(1.2);
-}
-
-/* -----------------------------------------------------
 HERO SECTION
 ----------------------------------------------------- */
 .hero {
@@ -124,20 +120,20 @@ HERO SECTION
 }
 
 .hero-title {
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 46px;
+    font-weight: 800;
 }
 
 .hero-subtitle {
-    margin-top: 12px;
+    margin-top: 14px;
     font-size: 18px;
     opacity: 0.85;
 }
 
 .experience-tag {
-    margin-top: 12px;
+    margin-top: 14px;
     font-size: 16px;
-    opacity: 0.75;
+    opacity: 0.78;
 }
 
 .hero-buttons {
@@ -145,7 +141,7 @@ HERO SECTION
 }
 
 .btn {
-    padding: 12px 22px;
+    padding: 12px 24px;
     border-radius: 10px;
     font-weight: 600;
     text-decoration: none;
@@ -157,41 +153,50 @@ HERO SECTION
     color: #0038b8;
 }
 
-/* social icons */
+/* -----------------------------------------------------
+HERO SOCIAL ICONS (WHITE FIX)
+----------------------------------------------------- */
 .social-icons {
-    margin-top: 25px;
+    margin-top: 30px;
     display: flex;
     gap: 18px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.social-icons i {
+.social {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.social i {
     font-size: 24px;
-    transition: 0.2s;
+    color: white !important;
+    opacity: 1 !important;
 }
 
-.social-icons i:hover {
-    color: #9D4EDD;
-}
-
-.phone {
+.social-text {
+    color: white;
     font-size: 15px;
-    opacity: 0.7;
+    opacity: 1;
+    font-weight: 500;
 }
 
 /* -----------------------------------------------------
 SECTION BASE
 ----------------------------------------------------- */
 .section {
-    max-width: 1050px;
+    max-width: 1100px;
     margin: auto;
     padding: 80px 35px;
 }
 
 .section h2 {
     font-size: 32px;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
+    font-weight: 700;
 }
 
 /* -----------------------------------------------------
@@ -200,20 +205,20 @@ BRANDING CARDS
 .branding-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 20px;
+    gap: 22px;
 }
 
 .branding-card {
     background: #1a1a1a;
     padding: 25px;
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.1);
     transition: 0.3s;
 }
 
 .branding-card:hover {
-    transform: translateY(-6px);
     border-color: #3A8DFF;
+    transform: translateY(-6px);
 }
 
 /* -----------------------------------------------------
@@ -221,7 +226,7 @@ EXPERIENCE
 ----------------------------------------------------- */
 .exp-card {
     background: #1a1a1a;
-    padding: 25px;
+    padding: 28px;
     border-radius: 14px;
     margin-bottom: 28px;
     border: 1px solid rgba(255,255,255,0.1);
@@ -229,39 +234,34 @@ EXPERIENCE
 
 .exp-header {
     display: flex;
-    gap: 20px;
+    gap: 22px;
     align-items: center;
 }
 
 .company-logo {
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 /* -----------------------------------------------------
-SKILLS
+SKILLS GRID
 ----------------------------------------------------- */
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 18px;
+    gap: 22px;
 }
 
 .skill-item {
-    background: white;      /* FIX: visibility */
+    background: white !important;     /* Dark mode fix */
     color: #000;
     text-align: center;
-    padding: 18px;
-    border-radius: 12px;
-    border: 1px solid #eee;
+    padding: 22px;
+    border-radius: 14px;
+    border: 1px solid #eaeaea;
     transition: 0.3s;
-}
-
-[data-theme="dark"] .skill-item {
-    background: #ffffff;
-    color: #000000;
 }
 
 .skill-item:hover {
@@ -270,14 +270,15 @@ SKILLS
 }
 
 .skill-item img {
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
 }
 
 .skill-item span {
-    margin-top: 10px;
+    margin-top: 12px;
     display: block;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
 }
 
@@ -286,8 +287,8 @@ PROJECTS
 ----------------------------------------------------- */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 26px;
 }
 
 .project-card {
@@ -303,32 +304,15 @@ PROJECTS
     border-color: #3A8DFF;
 }
 
-/* AI gradient thumbnails */
-.project-thumb {
-    height: 150px;
+/* Project Image (Your Provided Image) */
+.p-img {
+    height: 160px;
     border-radius: 12px;
     margin-bottom: 18px;
-    transition: 0.3s;
-}
-
-.project-card:hover .project-thumb {
-    transform: scale(1.03);
-}
-
-.p1 {
-    background: linear-gradient(135deg, #0055ff, #7a2fff);
-}
-
-.p2 {
-    background: linear-gradient(135deg, #009dff, #003fff);
-}
-
-.p3 {
-    background: linear-gradient(135deg, #783dff, #2d00ff);
-}
-
-.p4 {
-    background: linear-gradient(135deg, #006dff, #00b5ff);
+    background-image: url('https://cdn-icons-png.freepik.com/512/8730/8730862.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* -----------------------------------------------------
@@ -341,13 +325,13 @@ EDUCATION
     background: #1a1a1a;
     padding: 24px;
     border-radius: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     border: 1px solid rgba(255,255,255,0.1);
 }
 
 .edu-logo {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 
@@ -372,7 +356,7 @@ form textarea {
 
 [data-theme="light"] form input,
 [data-theme="light"] form textarea {
-    background: #ffffff;
+    background: white;
     border: 1px solid #ccc;
     color: #000;
 }
@@ -410,7 +394,7 @@ ANIMATIONS
 
 .slide-up {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
     animation: slideUp 1.2s ease forwards;
 }
 
@@ -429,8 +413,7 @@ RESPONSIVE
 
     nav {
         flex-direction: column;
-        gap: 12px;
-        padding-bottom: 18px;
+        gap: 10px;
     }
 
     .hero-title {
@@ -439,5 +422,9 @@ RESPONSIVE
 
     .hero-subtitle {
         font-size: 16px;
+    }
+
+    .section {
+        padding: 60px 25px;
     }
 }
