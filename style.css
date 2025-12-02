@@ -113,11 +113,18 @@ nav {
 /* -----------------------------------------------------
 HERO SECTION
 ----------------------------------------------------- */
+/* HERO BACKGROUND FIX */
 .hero {
-    padding: 120px 25px 80px;
+    padding: 140px 25px 100px;
     text-align: center;
-    background: linear-gradient(#001537, #0038b8);
+    background: #000000; /* dark mode default (pure black) */
 }
+
+/* Light Mode Hero */
+[data-theme="light"] .hero {
+    background: #ffffff; /* pure white */
+}
+
 
 .hero-title {
     font-size: 46px;
