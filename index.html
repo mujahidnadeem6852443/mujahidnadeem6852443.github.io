@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohammad Mujahid Nadeem | Data Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+
+    <title>Mohammad Mujahid Nadeem | Data Engineer</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Portfolio of Mohammad Mujahid Nadeem – Data Engineer specializing in Data Pipelines, Cloud Engineering, Distributed Systems, Spark, Databricks, Kafka, Airflow, Microsoft Fabric, and Python/SQL." />
+    <meta property="og:title" content="Mohammad Mujahid Nadeem | Data Engineer Portfolio" />
+    <meta property="og:description" content="Explore my data engineering projects, experience, cloud skills, and technical expertise." />
+    <meta property="og:type" content="website" />
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+
+    <!-- THEME TOGGLE -->
     <div class="theme-toggle">
         <i class="fa-solid fa-sun" id="lightIcon"></i>
         <i class="fa-solid fa-moon" id="darkIcon"></i>
     </div>
 
+    <!-- NAVBAR -->
+    <nav>
+        <h2 class="logoText">M. M. Nadeem</h2>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#branding">Branding</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <!-- HERO SECTION -->
     <section class="hero fade-in">
-        <div class="hero-content slide-up">
-            <h1>Mohammad Mujahid Nadeem</h1>
-            <p class="hero-sub">Data Engineer | Cloud | Distributed Systems | Python | SQL</p>
+        <div class="hero-inner slide-up">
+            <h1 class="hero-title">Senior Cloud & Data Engineer</h1>
+            <p class="hero-subtitle">
+                Distributed Systems • Data Architecture • Cloud Engineering • Spark • Databricks • Kafka • Airflow • Fabric
+            </p>
+
+            <p id="experienceYears" class="experience-tag"></p>
 
             <div class="hero-buttons">
-                <a href="mailto:mujahidnadeem6@gmail.com" class="btn primary">Contact Me</a>
-                <a href="resume.pdf" class="btn secondary" download>Download Resume</a>
+                <a href="#projects" class="btn primary">Explore My Work</a>
+                <a href="resume.pdf" download class="btn secondary">Download Resume</a>
             </div>
 
-            <div class="social-links">
+            <div class="social-icons">
                 <a href="https://www.linkedin.com/in/mohammad-mujahid-nadeem-b6bb431b2" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/mujahidnadeem6852443" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:mujahidnadeem6@gmail.com"><i class="fa-solid fa-envelope"></i></a>
@@ -35,135 +67,164 @@
         </div>
     </section>
 
-    <!-- WAVE DIVIDER -->
-    <div class="wave"></div>
-
-    <!-- ABOUT -->
-    <section class="about fade-in">
-        <h2>About Me</h2>
-        <p>
-            I am a Data Engineer with <strong id="experienceYears"></strong> of hands-on experience
-            across AWS, Azure, and Google Cloud Platform. I build cloud-native pipelines,
-            distributed data systems, and advanced analytics platforms using Python, SQL,
-            Databricks, Spark, Kafka, Airflow, and Microsoft Fabric.
-            Passionate about scalable data ecosystems, modern architecture and end-to-end
-            pipeline engineering.
-        </p>
-    </section>
-
-    <!-- EXPERIENCE TIMELINE -->
-    <section class="timeline fade-in">
-        <h2>Experience</h2>
-
-        <div class="timeline-container">
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Data Engineer — Alphabridge</h3>
-                    <span>Apr 2025 — Present</span>
-                    <p>
-                        Designing enterprise data platforms using Databricks, Spark, Kafka, Airflow,
-                        Fabric, SQL, and Python across AWS, Azure, and GCP.
-                    </p>
-                </div>
+    <!-- PERSONAL BRANDING -->
+    <section id="branding" class="section fade-in">
+        <h2>Who I Am</h2>
+        <div class="branding-grid">
+            <div class="branding-card">
+                <h3>Engineering Mindset</h3>
+                <p>I design systems that scale. My focus is reliability, fault tolerance, and real-world performance.</p>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Data Analyst — WIBS Enterprises (PVT LTD)</h3>
-                    <span>Jan 2024 — Apr 2024</span>
-                    <p>
-                        Built analytical dashboards, SQL pipelines, automations, and supported
-                        business insights.
-                    </p>
-                </div>
+            <div class="branding-card">
+                <h3>Problem Solver</h3>
+                <p>Data bottlenecks, slow queries, broken pipelines — I fix them with clarity and speed.</p>
             </div>
 
+            <div class="branding-card">
+                <h3>Execution Driven</h3>
+                <p>I deliver fast, clean, high-quality code that works in production from day one.</p>
+            </div>
         </div>
     </section>
 
-    <!-- WAVE DIVIDER -->
-    <div class="wave flip"></div>
+    <!-- ABOUT -->
+    <section id="about" class="section fade-in">
+        <h2>About Me</h2>
+        <p>
+            I am a Cloud & Data Engineer with <strong id="expText"></strong> of practical experience across
+            AWS, Azure, and Google Cloud Platform. I specialize in building large-scale ETL/ELT pipelines,
+            distributed data applications, and real-time systems with Python, SQL, Spark, Databricks,
+            Kafka, Airflow, and Microsoft Fabric.
+        </p>
+    </section>
 
-    <!-- EDUCATION -->
-    <section class="education fade-in">
-        <h2>Education</h2>
-        <div class="card"><h3>Bachelor's in Computer Science — FAST-NUCES</h3><p>2019 – 2024</p></div>
-        <div class="card"><h3>FSc Pre-Engineering — Forman Christian College</h3><p>2017 – 2019</p></div>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section fade-in">
+        <h2>Experience</h2>
+
+        <!-- Alphabridge -->
+        <div class="exp-card">
+            <div class="exp-header">
+                <img class="company-logo" src="https://alphabridgeconsulting.com/wp-content/uploads/2024/02/cropped-cropped-Alphabridge-logo-white.png">
+                <div>
+                    <h3>Data Engineer — <a href="https://alphabridgeconsulting.com/" target="_blank">Alphabridge</a></h3>
+                    <p class="date">Apr 2025 — Present</p>
+                </div>
+            </div>
+            <p>
+                Designing multi-cloud data platforms, real-time streaming pipelines, and enterprise ELT systems using
+                <strong>Python, SQL, Databricks, Spark, Airflow, Kafka, Fabric</strong>.  
+                Working across AWS, Azure & GCP enterprise clients.
+            </p>
+        </div>
+
+        <!-- WIBS -->
+        <div class="exp-card">
+            <div class="exp-header">
+                <img class="company-logo" src="https://www.wibs-group.com/wibs/wp-content/uploads/2023/08/WIBS-Logo.png">
+                <div>
+                    <h3>Data Analyst — <a href="https://www.wibs-group.com/wibs/" target="_blank">WIBS Enterprises Pvt Ltd</a></h3>
+                    <p class="date">Jan 2024 — Apr 2024</p>
+                </div>
+            </div>
+            <p>
+                Built professional-grade Power BI dashboards, automated SQL reporting pipelines, and 
+                implemented visualization best practices. Improved business reporting accuracy and automated
+                weekly insights delivery.
+            </p>
+        </div>
     </section>
 
     <!-- SKILLS -->
-    <section class="skills fade-in">
+    <section id="skills" class="section fade-in">
         <h2>Skills</h2>
-        <div class="skills-grid">
-            <span class="skill">AWS</span><span class="skill">Azure</span><span class="skill">GCP</span>
-            <span class="skill">Databricks</span><span class="skill">Spark</span><span class="skill">Kafka</span>
-            <span class="skill">Airflow</span><span class="skill">Fabric</span><span class="skill">Python</span>
-            <span class="skill">SQL</span><span class="skill">Git</span><span class="skill">GitHub</span>
-            <span class="skill">Docker</span><span class="skill">Kubernetes</span>
+
+        <div class="skill-grid">
+
+            <!-- Logos with fade animation -->
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><span>Python</span></div>
+            <div class="skill-item"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png"><span>SQL</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"><span>AWS</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"><span>Azure</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"><span>GCP</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/databricks/databricks-original.svg"><span>Databricks</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachespark/apachespark-original.svg"><span>Spark</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"><span>Kafka</span></div>
+            <div class="skill-item"><img src="https://airflow.apache.org/images/airflow-logo.png"><span>Airflow</span></div>
+            <div class="skill-item"><img src="https://learn.microsoft.com/en-us/media/logos/microsoft-fabric-icon.png"><span>Fabric</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><span>Git</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><span>GitHub</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"><span>Docker</span></div>
+            <div class="skill-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg"><span>Kubernetes</span></div>
         </div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="projects fade-in">
+    <section id="projects" class="section fade-in">
         <h2>Projects</h2>
 
         <div class="project-grid">
-
             <div class="project-card">
-                <h3>Local Python ETL Pipeline</h3>
-                <p>Modular ETL system using Pandas + SQLite.</p>
+                <div class="project-thumb thumb1"></div>
+                <h3>Python ETL Pipeline</h3>
+                <p>ETL pipeline using Pandas + SQLite with validation layer.</p>
                 <a href="https://github.com/mujahidnadeem6852443/python-local-etl-pipeline" target="_blank">View →</a>
             </div>
 
             <div class="project-card">
+                <div class="project-thumb thumb2"></div>
                 <h3>Retail SQL Analytics</h3>
-                <p>SQL schema, analytics, window functions.</p>
+                <p>SQL schema, analytics, BI insights, window functions.</p>
                 <a href="https://github.com/mujahidnadeem6852443/retail-sql-analytics" target="_blank">View →</a>
             </div>
 
             <div class="project-card">
-                <h3>Real-Time Log Pipeline</h3>
-                <p>Streaming microservices (Docker + K8s).</p>
+                <div class="project-thumb thumb3"></div>
+                <h3>Docker + Kubernetes Pipeline</h3>
+                <p>Real-time microservices log processing pipeline.</p>
                 <a href="https://github.com/mujahidnadeem6852443/realtime-log-pipeline" target="_blank">View →</a>
             </div>
 
             <div class="project-card">
+                <div class="project-thumb thumb4"></div>
                 <h3>Spring Security Project</h3>
-                <p>JWT authentication & role security.</p>
+                <p>JWT authentication + role-based authorization.</p>
                 <a href="https://github.com/mujahidnadeem6852443/Spring-Security-Project" target="_blank">View →</a>
             </div>
-
         </div>
     </section>
 
-    <!-- TESTIMONIALS -->
-    <section class="testimonials fade-in">
-        <h2>What People Say</h2>
+    <!-- EDUCATION -->
+    <section id="education" class="section fade-in">
+        <h2>Education</h2>
 
-        <div class="testimonial-grid">
-            <div class="testimonial">
-                <p>“Highly detail-oriented and technically skilled. Amazing problem-solver.”</p>
-                <h4>— Team Lead</h4>
+        <div class="edu-card">
+            <img src="https://www.nu.edu.pk/Content/images/nu_logo.png" class="edu-logo">
+            <div>
+                <h3>Bachelor's in Computer Science — FAST-NUCES</h3>
+                <p>2019 – 2024</p>
             </div>
+        </div>
 
-            <div class="testimonial">
-                <p>“Strong data engineering mindset. Very fast learner and dependable.”</p>
-                <h4>— Senior Architect</h4>
+        <div class="edu-card">
+            <img src="https://www.fccollege.edu.pk/wp-content/uploads/2021/03/FCCU-Logo-White.png" class="edu-logo">
+            <div>
+                <h3>FSc Pre-Engineering — Forman Christian College (FCC)</h3>
+                <p>2017 – 2019</p>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT FORM -->
-    <section class="contact fade-in">
+    <!-- CONTACT -->
+    <section id="contact" class="section fade-in">
         <h2>Contact Me</h2>
+
         <form action="https://formsubmit.co/mujahidnadeem6@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message..." required></textarea>
-            <button type="submit">Send Message</button>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Message..." required></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
 
@@ -171,26 +232,39 @@
         © 2025 Mohammad Mujahid Nadeem — Portfolio
     </footer>
 
+    <!-- EXPERIENCE SCRIPT -->
     <script>
-        // Experience auto-update
-        const startDate = new Date("2025-04-01");
-        const nowDate = new Date();
-        const expYears = ((nowDate - startDate) / (365 * 24 * 60 * 60 * 1000)).toFixed(1);
-        document.getElementById("experienceYears").innerText = expYears + " years";
+        function calculateExperience() {
+            const start = new Date("2025-04-01");
+            const now = new Date();
 
-        // Theme toggle
+            let months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+            let exp = Math.floor(months / 6) * 0.5;
+            if (exp < 1) exp = 1;
+
+            document.getElementById("experienceYears").innerText = exp + " Years Experience";
+            document.getElementById("expText").innerText = exp + " years";
+        }
+        calculateExperience();
+
+        // Light/dark toggle
         const body = document.body;
+        const lightIcon = document.getElementById("lightIcon");
+        const darkIcon = document.getElementById("darkIcon");
+
         const savedTheme = localStorage.getItem("theme") || "dark";
         body.setAttribute("data-theme", savedTheme);
 
-        document.getElementById("lightIcon").onclick = () => {
+        lightIcon.onclick = () => {
             body.setAttribute("data-theme", "light");
             localStorage.setItem("theme", "light");
         };
-        document.getElementById("darkIcon").onclick = () => {
+
+        darkIcon.onclick = () => {
             body.setAttribute("data-theme", "dark");
             localStorage.setItem("theme", "dark");
         };
     </script>
+
 </body>
 </html>
