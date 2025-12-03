@@ -7,86 +7,10 @@ GLOBAL RESET
     box-sizing: border-box;
 }
 
-html, body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    scroll-behavior: smooth;
-}
-
 body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     background: #0d0d0d;
     color: white;
-    transition: background 0.25s ease, color 0.25s ease;
-}
-
-/* -----------------------------------------------------
-LIGHT MODE
------------------------------------------------------ */
-[data-theme="light"] {
-    background: #ffffff;
-    color: #000000;
-}
-
-[data-theme="light"] nav {
-    background: #ffffff;
-    border-bottom: 1px solid #cccccc;
-}
-
-[data-theme="light"] .hero-title {
-    color: #000 !important;
-}
-
-[data-theme="light"] .hero-subtitle,
-[data-theme="light"] .experience-tag {
-    color: #333 !important;
-}
-
-/* -----------------------------------------------------
-THEME TOGGLE
------------------------------------------------------ */
-.theme-toggle {
-    position: fixed;
-    top: 75px;
-    right: 25px;
-    z-index: 999;
-    display: flex;
-    gap: 14px;
-}
-
-.theme-toggle i {
-    cursor: pointer;
-    padding: 6px;
-    border-radius: 6px;
-    font-size: 24px;
-    transition: 0.2s ease;
-}
-
-/* SUN ALWAYS YELLOW */
-#lightIcon {
-    color: #FFD43B !important;
-    display: none;
-}
-
-/* MOON DARK IN LIGHT MODE */
-#darkIcon {
-    color: #111 !important;
-}
-
-/* DARK MODE → MOON WHITE */
-[data-theme="dark"] #darkIcon {
-    color: white !important;
-}
-
-/* LIGHT MODE → SHOW SUN ONLY */
-[data-theme="light"] #lightIcon {
-    display: inline;
-}
-[data-theme="light"] #darkIcon {
-    display: none;
-}
-
-/* DARK MODE → SHOW MOON ONLY */
-[data-theme="dark"] #darkIcon {
-    display: inline;
 }
 
 /* -----------------------------------------------------
@@ -98,7 +22,7 @@ nav {
     align-items: center;
     padding: 16px 45px;
     background: #000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
     position: sticky;
     top: 0;
     z-index: 900;
@@ -118,66 +42,50 @@ nav {
     color: #3A8DFF;
     text-decoration: none;
     font-size: 15px;
-    transition: 0.25s;
 }
+
 .nav-links a:hover {
     color: #9D4EDD;
 }
 
 /* -----------------------------------------------------
-HERO SECTION
+HERO
 ----------------------------------------------------- */
 .hero {
-    padding: 140px 25px 110px;
+    padding: 130px 25px 110px;
     text-align: center;
-    background: black;
 }
 
-[data-theme="light"] .hero {
-    background: white;
-}
-
-/* TITLE ALWAYS READABLE */
 .hero-title {
     font-size: 48px;
     font-weight: 900;
-    color: white !important;
+    color: white;
 }
 
-[data-theme="light"] .hero-title {
-    color: #000 !important;
-}
-
-.hero-subtitle,
-.experience-tag {
+.hero-subtitle {
     font-size: 17px;
     opacity: 0.85;
-    margin-top: 12px;
-    color: white !important;
+    margin-top: 10px;
 }
 
-[data-theme="light"] .hero-subtitle,
-[data-theme="light"] .experience-tag {
-    color: #333 !important;
+.experience-tag {
+    margin-top: 8px;
+    font-size: 18px;
+    opacity: 0.9;
 }
 
 /* BUTTON */
-.hero-buttons {
-    margin-top: 28px;
-}
-
 .btn {
     padding: 13px 26px;
     background: white;
     color: #0038b8;
     border-radius: 12px;
-    font-weight: 600;
     text-decoration: none;
-    transition: 0.2s;
+    font-weight: 600;
 }
 
 .btn:hover {
-    background: #e6e6e6;
+    background: #dadada;
 }
 
 /* -----------------------------------------------------
@@ -196,35 +104,25 @@ SOCIAL ICONS
     display: flex;
     align-items: center;
     gap: 6px;
-}
-
-/* DARK MODE → WHITE */
-.social i,
-.social-text {
-    color: white !important;
-}
-
-/* LIGHT MODE → BLACK */
-[data-theme="light"] .social i,
-[data-theme="light"] .social-text {
-    color: #000 !important;
+    color: white;
 }
 
 .social i {
     font-size: 26px;
+    color: white;
 }
 
 .social-text {
     font-size: 15px;
-    font-weight: 500;
+    color: white;
 }
 
 .social a {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 /* -----------------------------------------------------
-SECTION Styling
+SECTIONS
 ----------------------------------------------------- */
 .section {
     max-width: 1100px;
@@ -246,23 +144,18 @@ EXPERIENCE
     padding: 28px;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.1);
-    margin-bottom: 28px;
-    transition: 0.25s;
-}
-
-[data-theme="light"] .exp-card {
-    background: #ffffff;
+    margin-bottom: 30px;
 }
 
 .exp-header {
     display: flex;
+    gap: 20px;
     align-items: center;
-    gap: 22px;
 }
 
 .company-logo {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
 }
 
@@ -282,22 +175,15 @@ SKILLS
     text-align: center;
     border-radius: 14px;
     border: 1px solid #ddd;
-    transition: 0.25s;
-}
-
-.skill-item:hover {
-    transform: translateY(-6px);
-    border-color: #3A8DFF;
 }
 
 .skill-item img {
     width: 55px;
     height: 55px;
-    object-fit: contain;
 }
 
 .skill-item span {
-    margin-top: 10px;
+    margin-top: 8px;
     font-weight: 600;
     display: block;
 }
@@ -316,26 +202,20 @@ PROJECTS
     padding: 24px;
     border-radius: 14px;
     border: 1px solid rgba(255,255,255,0.1);
-    transition: 0.25s;
-}
-
-[data-theme="light"] .project-card {
-    background: #ffffff;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
-    border-color: #3A8DFF;
+    transform: translateY(-5px);
 }
 
 .p-img {
-    height: 160px;
+    height: 150px;
     background-image: url('https://cdn-icons-png.freepik.com/512/8730/8730862.png');
     background-size: contain;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     border-radius: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 /* -----------------------------------------------------
@@ -352,13 +232,9 @@ EDUCATION
     margin-bottom: 24px;
 }
 
-[data-theme="light"] .edu-card {
-    background: #ffffff;
-}
-
 .edu-logo {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
 }
 
@@ -381,21 +257,12 @@ form textarea {
     border: none;
 }
 
-[data-theme="light"] form input,
-[data-theme="light"] form textarea {
-    background: #ffffff;
-    color: #000;
-    border: 1px solid #ccc;
-}
-
 form button {
     background: #3A8DFF;
     padding: 12px;
     border-radius: 10px;
-    border: none;
     color: white;
     font-weight: 600;
-    transition: 0.25s;
 }
 
 form button:hover {
@@ -406,27 +273,22 @@ form button:hover {
 FOOTER
 ----------------------------------------------------- */
 footer {
-    text-align: center;
     padding: 40px;
+    text-align: center;
     opacity: 0.8;
+    color: white;
 }
 
 /* -----------------------------------------------------
 RESPONSIVE
 ----------------------------------------------------- */
 @media (max-width: 768px) {
-
     nav {
         flex-direction: column;
-        gap: 10px;
-        padding: 14px 25px;
+        gap: 12px;
     }
 
     .hero-title {
         font-size: 36px;
-    }
-
-    .section {
-        padding: 60px 25px;
     }
 }
