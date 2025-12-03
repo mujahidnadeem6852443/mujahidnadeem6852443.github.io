@@ -96,9 +96,17 @@ RESPONSIVE NAV WITHOUT HAMBURGER
 HERO
 ----------------------------------------------------- */
 .hero {
-    padding: 130px 25px 110px;
+    padding: 160px 25px 140px;
     text-align: center;
 }
+
+.experience-tag {
+    margin-top: 18px;
+    margin-bottom: 28px; /* pushes Explore button down */
+    font-size: 18px;
+    opacity: 0.9;
+}
+
 
 .hero-title {
     font-size: 48px;
@@ -112,11 +120,7 @@ HERO
     margin-top: 10px;
 }
 
-.experience-tag {
-    margin-top: 8px;
-    font-size: 18px;
-    opacity: 0.9;
-}
+
 
 /* BUTTON */
 .btn {
