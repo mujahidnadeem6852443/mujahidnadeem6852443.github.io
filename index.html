@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
+
+
 <body>
 
     <!-- NAVBAR -->
@@ -31,6 +33,9 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
+
+
+
 
     <!-- HERO SECTION -->
     <section class="hero fade-in">
@@ -254,5 +259,17 @@
         calculateExperience();
     </script>
 
+     <script>
+        const navToggle = document.getElementById("navToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+            navToggle.classList.toggle("active");
+        });
+    </script>
+
 </body>
+
+
 </html>

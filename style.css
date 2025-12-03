@@ -12,10 +12,10 @@ body {
     background: #0d0d0d;
     color: white;
 }
-
 /* -----------------------------------------------------
-NAVBAR
+NAVBAR — CLEAN RESPONSIVE (NO HAMBURGER)
 ----------------------------------------------------- */
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -33,6 +33,7 @@ nav {
     font-weight: 700;
 }
 
+/* Desktop Navigation */
 .nav-links {
     display: flex;
     gap: 28px;
@@ -46,6 +47,49 @@ nav {
 
 .nav-links a:hover {
     color: #9D4EDD;
+}
+
+/* -----------------------------------------------------
+RESPONSIVE NAV WITHOUT HAMBURGER
+----------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    nav {
+        flex-direction: column;
+        gap: 14px;
+        padding: 14px 25px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 18px;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        padding: 12px 18px;
+    }
+
+    .logoText {
+        font-size: 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
 }
 
 /* -----------------------------------------------------
