@@ -1,5 +1,7 @@
 /* -----------------------------------------------------
+<!-- PORTFOLIO -->
 GLOBAL RESET
+
 ----------------------------------------------------- */
 * {
     margin: 0;
@@ -323,7 +325,7 @@ FOOTER
 footer {
     padding: 40px;
     text-align: center;
-    opacity: 0.8;
+    opacity: 0.9;
     color: white;
 }
 
